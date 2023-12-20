@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+        * {
+          box-sizing: border-box;
+          margin: 0px;
+          padding: 0px;
+          font-family: "Nunito", sans-serif;
+        }
+        
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        body {
+          background-image:url("images/bg.jpeg");
+        }
+        
+        .orange {
+          color: #FF7A01;
+        }
+        
+        .montserrat {
+          font-family: "Montserrat", sans-serif;
+        }
+        
+        img {
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+        }
+        
+        .container {
+          max-width: 1300px;
+          margin: 0px auto 0px auto;
+          padding: 0px 40px;
+        }
+        @media (min-width: 1200px) and (max-width: 1441px) {
+          .container {
+            max-width: 1250px;
+            padding: 0px 40px;
+          }
+        }
+        @media (max-width: 767px) {
+          .container {
+            padding: 0px 30px;
+          }
+        }
+        @media (max-width: 479px) {
+          .container {
+            padding: 0px 30px 0px 20px;
+          }
+        }
+        
+        .about-me {
+          padding-top: 1px;
+          padding-bottom: 50px;
+        }
+        .about-me .about-me-container {
+          position: relative;
+        }
+        @media (max-width: 960px) {
+          .about-me .about-me-container {
+            padding-bottom: 100px;
+          }
+        }
+        .about-me .about-me-container .about-me-title {
+            margin-bottom: 30px;
+          font-size: 35px;
+          color: orange;
+          font-weight: 500;
+          font-style: italic;
+        }
+        @media (max-width: 500px) {
+          .about-me .about-me-container .about-me-title {
+            font-size: 30px;
+          }
+        }
+        
+        .about-me-flex-container {
+          margin-top: -15px;
+          margin-left: 150px;
+          left: 100px;
+          display: flex;
+          justify-content: space-between;
+        }
+        @media (max-width: 960px) {
+          .about-me-flex-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0px;
+            gap: 50px;
+          }
+        }
+        @media (max-width: 500px) {
+          .about-me-flex-container {
+            margin-top: -10px;
+          }
+        }
+        .about-me-flex-container .about-me-image {
+          position: relative;
+          width: 400px;
+          height: 400px;
+        }
+        @media (max-width: 500px) {
+          .about-me-flex-container .about-me-image {
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .about-me-flex-container .about-me-image .back-div {
+          position: absolute;
+          bottom: 0;
+          z-index: -3;
+          background-color: #013747;
+          width: 80%;
+          height: 80%;
+        }
+        .about-me-flex-container .about-me-image .black-image {
+          z-index: -2;
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          height: 100%;
+        }
+        .about-me-flex-container .about-me-image .black-image img {
+          height: 100%;
+        }
+        .about-me-flex-container .about-me-image .main-image {
+          width: 90%;
+        
+          height: 90%;
+          overflow: hidden;
+          position: absolute;
+          left: 2%;
+          top: 10%;
+          box-shadow: rgb(0, 0, 0) 0px 7px 50px 0px;
+          transition: all 0.2s ease-out;
+        }
+        .about-me-flex-container .about-me-image .main-image:hover {
+          transform-origin: top center;
+          transform: scale(1.5);
+          border-radius: 25px;
+        }
+        .about-me-flex-container .about-me-image .main-image img {
+          transform-origin: center center;
+          transform: scale(1);
+          -o-object-fit: cover;
+             object-fit: cover;
+          transition: all 0.2s ease-out;
+        }
+        .about-me-flex-container .about-me-image .main-image img:hover {
+          transform: scale(1);
+        }
+        .about-me-flex-container .about-me-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 50px;
+          flex: 0 0 40%;
+        }
+        @media (max-width: 960px) {
+          .about-me-flex-container .about-me-content {
+            flex-direction: row-reverse;
+          }
+        }
+        .about-me-flex-container .about-me-content .logo {
+          max-width: 200px;
+        }
+        .about-me-flex-container .about-me-content .logo img {
+          filter: drop-shadow(0 0 25px rgb(0, 0, 0));
+        }
+        @media (max-width: 500px) {
+          .about-me-flex-container .about-me-content .logo img {
+            transform: rotateZ(0deg);
+          }
+        }
+        .about-me-flex-container .about-me-content .text {
+          color: #fff;
+          font-weight: 700;
+          font-size: 18px;
+        }
+        @media (max-width: 500px) {
+          .about-me-flex-container .about-me-content .text {
+            font-size: 16px;
+          }
+        }
+        
+        
+        
+        .mail-button {
+          display: flex;
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          padding: 15px;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.2s ease-out;
+        }
+        .mail-button a {
+          display: flex;
+        }
+        .mail-button img {
+          -o-object-fit: contain;
+             object-fit: contain;
+          transition: all 0.2s ease-out;
+        }
+        
+        
+        .mail-button2 {
+          background-color: #001925;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border: 10px solid #001925;
+        }
+        .mail-button2 img {
+          filter: invert(56%) sepia(42%) saturate(4795%) hue-rotate(360deg) brightness(103%) contrast(105%);
+        }
+        .mail-button2:hover {
+          background-color: #FF7A01;
+          border: 10px solid #FF7A01;
+        }
+        .mail-button2:hover img {
+          filter: unset;
+          transform: scale(1.5);
+        }
+        
+        .portfolio-link {
+          
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .portfolio-link a{
+          text-decoration: none;
+          color: white;
+        
+          padding: 10px;
+          margin: 10px;
+          border-radius: 5px;
+        }
+            </style>
+            <link rel="stylesheet" type="text/css" href="style.css">
+          
+        
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- custom css file link -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <
+        
+        <script
+           src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+        <script>
+        $(function(){
+          $('#header').load('/header.html');
+        });
+        $(function(){
+          $('#footer').load('/footer.html');
+        
+        });
+        
+        
+        
+        </script>
+</head>
+<body>
+ 
+</body>
+</html> <div id="header"></div>
+<section class="about-me" id="about-me">
+    <div class="container">
+      <div class="about-me-container">
+        <div class="about-me-title">
+        <br>  OUR  FOUNDER  <br> Rakhi Jain<br>
+           <!-- B.Ed  <br>
+        Experience - 05 Year's -->
+      </div>
+  
+        <div class="about-me-flex-container">
+          <div class="about-me-image">
+            <div class="back-div"></div>
+            <!-- <div class="black-image"><img src="images/m3.png" alt="black"></div> -->
+            <div class="main-image"><img src="images/m3.png" alt="Rakhi Jain"></div>
+            
+          </div>
+          
+          <div class="about-me-content">
+  
+            <!-- <div class="logo"><img src="images/logo2.jpg" alt="smit"></div> -->
+  
+            <div class="text">
+              <p><b>Dear Students and Parents,</b> <br>
+   
+                I am delighted to announce the opening of our prestigious institution, the
+                L'carro Career Institute. Our aim is to provide education to all students
+                who aspire to learn, regardless of their economic background. We believe
+                that education is a fundamental right, and no student should be left
+                behind due to financial constraints. At L'carro Career Institute, we
+                provide free education to
+                deserving students who demonstrate their
+                willingness to learn and work hard. Our goal is not just to develop you
+                academically but also to groom you into responsible citizens of our
+                society. We believe that education is incomplete without imbibing social
+                values, and we strive to instill these values in all our students. Apart from
+                offering quality education, we also conduct summer camps and other
+                development programs to enhance your overall personality. Our goal is to
+                provide a well-rounded education that will prepare you to become
+                successful individual in society. We are committed to providing the best
+                possible education to all our students, and we believe that together, we
+                can create a better future for ourselves and our society. Join us in this
+                journey towards success and make your dreams a reality. <br><br>
+                Sincerely,<br>
+               <b>Rakhi Jain</b> <br> 
+                  (Chairman) <br><br>
+                </p>
+
+                
+  
+           
+  
+            
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="mail-button mail-button2">
+          <a href="dk9065181292@gmail.com"><img src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/20391be8bf1ed24ef0e5da066bf68a5f6ee78fa1/images/mail.svg" alt="mail"></a>
+        </div> -->
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  <br><br>
+  <div class = "portfolio-link">
+    <a href="http://deepakportfoliopandit.netlify.app" target="_blank"> My Portfolio </a>
+    <a href="https://www.linkedin.com/in/deepak-kumar-6450a9200" target="_blank"> UI Design by Deepak  </a>
+  </div>
+  <div id="footer"></div>

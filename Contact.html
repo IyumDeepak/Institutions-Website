@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- css link -->
+	<!-- <link rel="stylesheet" href="contactStyle.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        .contact{
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url(images/bg.jpeg);
+            background-size: cover;
+        }
+        .contact .content{
+            max-width: 800px;
+            text-align: center;
+        }
+        .contact .content h2{
+            font-size: 36px;
+            font-weight: 500;
+            color: #00bcd4;
+        }
+        .contact .content p{
+            font-weight: 300;
+            color: #fff;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .container .contactInfo .box .text a{
+            color: white;
+        }
+        .container .contactInfo .box .icons{
+            min-width: 50px;
+            height: 50px;
+            background: royalblue;
+            display: flex;
+            color: darkblue;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+        .container .contactInfo .box .icon{
+            min-width: 50px;
+            height: 50px;
+            background: royalblue;
+            display: flex;
+            color: darkblue;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 24px;
+        }
+        .container .contactInfo .box .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+        }
+        .container .contactInfo .box .text h3{
+            font-weight: 500;
+            color: #00bcd4;
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+            border-radius: 50px;
+        }
+        .contactForm h2{
+            font-size: 30px;
+            color: orange;
+            font-weight: 500;
+        }
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            resize: none;
+            border-bottom: 1px solid #333;
+        }
+        .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            resize: none;
+            border-bottom: 1px solid #333;
+        }
+        .contactForm .inputBox span{
+            position: relative;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s ease;
+            color: orange;
+        }
+        .contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textarea:valid ~ span{
+            color: orangered;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+        .contactForm .inputBox input[type=submit]{
+            width: 100px;
+            background: orange;
+            color: #fff;
+            cursor: pointer;
+            align-self: center;
+            font-size: 18px;
+            border-radius: 21px;
+            
+        }
+        
+        .contactInfo .social-media a{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: transparent;
+            border: .2rem solid royalblue;
+            font-size: 2rem;
+            color: blue;
+            margin: 1.5rem 1rem 2rem 0;
+            transition: .5s ease;
+        }
+        .contactInfo .social-media a:hover{
+            background: whitesmoke;
+            color: royalblue;
+        }
+        
+        @media (max-width: 991px){
+            .contact{
+                padding: 50px;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .container .contactInfo{
+                margin-bottom: 40px;
+                width: 100%;
+            }
+            .contactForm{
+                width: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+	
+
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- custom css file link -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  
+  <script
+		 src="https://code.jquery.com/jquery-3.6.4.min.js"
+integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+crossorigin="anonymous"></script>
+<script>
+  $(function(){
+	  $('#header').load('header.html');
+  });
+  $(function(){
+	  $('#footer').load('footer.html');
+
+  });
+  
+  
+
+</script>
+</head>
+<body>
+   <div id="header"></div>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us For Any Query</h2>
+            <!-- <p>No online classes · On-site services not available
+                Address: Kumbha Marg, opp. V Mart, Sanganer, Sector 9, Pratap Nagar, Jaipur, Rajasthan 302033.</p> -->
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot fa-bounce"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <a href="https://www.google.com/maps/place/L'+carro+Career+institute/@26.8021868,75.8193574,17z/data=!4m14!1m7!3m6!1s0x396dc907e15c6771:0xbca08fa6f6a8f8ef!2sL'+carro+Career+institute!8m2!3d26.802182!4d75.8219323!16s%2Fg%2F11rtd1n382!3m5!1s0x396dc907e15c6771:0xbca08fa6f6a8f8ef!8m2!3d26.802182!4d75.8219323!16s%2Fg%2F11rtd1n382" target="_blank">Kumbha Marg, opp. V Mart, Sanganer, Sector 9, Pratap Nagar, Jaipur,<br> Rajasthan - 302033</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone fa-shake"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p> +91 9672988800 ,+91 89551 22666 </p>
+                    </div>
+                </div>
+               
+                <div class="box">
+                    <div class="icons"><a href=" https://wa.me/message/VMVWMFHISJUHI1"><i class="fa-brands fa-square-whatsapp fa-shake"></i></a></div>
+                    <div class="text">
+                        <h3>whatsapp</h3>
+                        <p>+91 9672988800</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope fa-flip"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>Lcarrodigital@gmail.com</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=100087791941148&mibextid=ZbWKwL" target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com/lcarrocareerinstitute?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/l-carro-career-institute-94b8101a0/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BUCnIOHeWRJa721NNFXUg%2FQ%3D%3D" target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" placeholder="Enter your Full Name" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" placeholder="Email.id" required>
+                        <span>Your Email</span>
+                    </div>
+                    <!-- <div class="inputBox">
+                        <span>Subject</span>
+                        <input type="text" name="" required="required">
+                    </div> -->
+                    <div class="inputBox">
+                        <textarea placeholder="Text.." required></textarea>
+                        <span>Type Your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+</body>
+</html>
